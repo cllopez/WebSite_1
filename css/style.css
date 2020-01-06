@@ -1,0 +1,370 @@
+html{
+    font-size: 62.5%;   /*Reset for Rems  -- 62-55 = 10px de 16px*/
+    box-sizing: border-box;
+}
+/* Apply a natural box layout model to all elements, but allowing components to change */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* Globals */
+.container{
+    max-width: 120rem;  /* == 1200px */
+    margin: 0 auto;     /*margin: 0 auto 0 auto*/         
+}
+
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+img{
+    max-width: 100%;
+}
+
+/* Utilidades */
+    .section{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .fw-300{
+        font-weight: 300;
+    }
+    .text-center{
+        text-align: center;
+    }
+    .d-block{
+        display: block!important;
+    }
+    .center-content{
+        max-width: 80rem;
+    }
+
+/*--- Buttons ----*/
+.button{
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    margin-top: 2rem;
+}
+.button:hover{
+    cursor: pointer;
+}
+.btn-yellow{
+    background-color: #e08709;
+}
+.btn-green{
+    background-color: #71b100;
+}
+
+
+/* Header */
+
+.site-header{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio{
+    background-image: url(../img/header.jpg);
+    height: 100vh;   /* According to the heigh of the screen.*/
+    min-height: 60rem;  /*Minimum height that the photo must have.*/
+    background-position: center;  
+    background-size: cover;
+}
+
+.header-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header-container h1{
+    color: white;
+    padding-bottom: 2rem;
+    max-width: 50rem;
+    line-height: 2;
+}
+
+
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+/* Navigation */
+.nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem; /* == 18 px */
+    margin-right: 2rem; 
+}
+.nav a:last-of-type{
+    margin: 0;
+}
+nav a:hover{
+    color: cadetblue;
+}
+
+/* Us Icons */
+.us-icons{
+    display: flex; 
+    justify-content: space-between;
+}
+.icon{
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+
+}
+.icon h3{
+    text-transform: uppercase;
+}
+/* .us-header{
+    font-weight: 300;
+    text-align: center;
+} */
+
+/*--- House's Ads ---- */
+
+.ads-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ad{
+    flex: 0 0 calc(33.3% - 1rem);
+    /* flex-grow: 0; --> For the content to grow if posibble. 
+    flex-shrink: 0;   ---> For the content to decreases if posibble. 
+    flex-basis: calc(33.3% - 1rem); */
+    border: 1px solid #B5B5B5;
+    background-color: #F5f5f5;  
+    margin-bottom: 2rem;
+}
+.ad-container{
+    padding: 2rem;
+}
+.ad-container h3,p{
+    margin: 0;
+}
+.price{
+    color: #71b100;
+    font-weight: 700;
+}
+.icon-ch{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 500px;
+}
+.icon-ch li{
+    /* flex: 1; */
+    display: flex;
+}
+.icon-ch li img{
+    margin-right: 2rem;
+}
+/*-- p font-weight: 400 --- */
+/*-- h1 font-weight: 700 --- */
+.see-all{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;   
+}
+
+/*--- Contact us ---- */
+.contact-img{
+    background-image: url(../img/encuentra.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+.contact-cont{
+    flex: 1;
+    color: white;
+    text-align: center;
+}
+.contact-cont p{
+    font-size: 1.8rem;
+    line-height: 5;
+}
+
+/*---- Lower Section ----*/
+.lower-section{
+    display: flex;
+    justify-content: space-between;
+}
+.lower-section .blog{
+    flex-basis: 60%;
+}
+.lower-section .testimonials{
+    flex-basis: calc(40% - 2rem);
+}
+.blog-post{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.blog-post:last-of-type{
+    margin-bottom: 0;
+}
+.blog-post .img_b{
+    flex-basis: 40%;
+}
+.blog-post .post-text{
+    flex-basis: calc(60% - 3rem);
+}
+.post-text h4{
+    margin: 0;
+    line-height: 1.4;
+}
+.post-text h4::after{
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: cadetblue;
+    margin-top: 1rem;
+}
+.post-text a{
+    color: black;
+    text-decoration: none;
+}
+.post-text span{
+    color: #e08709;
+}
+
+/*---- Testimonials ----*/
+.testimonial{
+    background-color: cadetblue;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 2rem;
+}
+.testimonial p{
+    text-align: right;
+}
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    position: absolute;
+    left: -2rem;
+}
+.testimonial blockquote{
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+/*----- Footer -----*/
+.site-footer{
+    background-color:#333333;
+    margin: 0;
+}
+.cpyr{
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+}
+.container-footer{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/** Internal Pages */
+/** US */
+.us-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+}
+.us-text blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    
+}
+/**Ad*/
+.property-summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/** Contact */
+form p{
+    font-size: 1.8rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+}
+legend{
+    font-size: 2rem;
+    color: #4f4f4f;
+}
+label{
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+
+}
+input:not([type='submit']), textarea{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+input[type='radio']{
+    width: auto;
+    margin-bottom: 0;
+    
+}
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+textarea{
+    height: 20rem;
+}
+.contact-shape{
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
